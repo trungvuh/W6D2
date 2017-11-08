@@ -54,6 +54,7 @@ class HanoiView {
 
     if (this.game.move(start,end)) {
       let $disc = $(startClass).children(':first-child');
+
       $(endClass).children(':first-child').before($disc);
       // $(startClass).children(':first-child').remove();
     } else {
@@ -67,7 +68,7 @@ class HanoiView {
   wonHanoi() {
 
     if (this.game.isWon()) {
-      $("div").css("background", "green");
+      $("div").css("background", "red");
       $("li").off("click");
       alert("YOU WON");
     }
